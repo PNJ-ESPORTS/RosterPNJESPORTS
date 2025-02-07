@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Seleksi PNJ Esport 2025</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .result-box {
+        background-color: rgba(30, 30, 30, 0.9);
+        padding: 20px;
+        width: 90%;
+        max-width: 900px;
+        border-radius: 10px;
+      }
+      .title-box {
+        background-color: #1e3a8a;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result-box">
+      <div class="title-box">
+        <h3 class="text-white">
+          SELAMAT ANDA DINYATAKAN LOLOS MENJADI ROSTER PNJ ESPORTS 2025
+        </h3>
+      </div>
+
+      <div class="row text-white">
+        <div class="col-md-6">
+          <p><strong>Nama:</strong> <span id="nama"></span></p>
+          <p><strong>Jurusan:</strong> <span id="jurusan"></span></p>
+          <p><strong>Divisi:</strong> <span id="divisi"></span></p>
+          <p><strong>Role:</strong> <span id="role"></span></p>
+          <p id="tim-info"><strong>Tim:</strong> <span id="tim"></span></p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            Selamat untuk yang berhasil terpilih menjadi ROSTER PNJ ESPORTS
+            2025.
+          </p>
+          <p>
+            Silahkan Screenshot hasil ini, lalu kirimkan buktinya ke WhatsApp
+            Manager Contact Person di bawah ini yaa!
+          </p>
+          <p><strong>Contact Person:</strong></p>
+          <p id="contact-person"></p>
+          <p style="font-size: 11px">
+            Note : "Seluruh nama diatas/ROSTER PES 2025 Wajib hadir First
+            Gathering (Online pada hari Sabtu, 8 Februari 2025), Broadcast akan
+            di share di grup ROSTER)"
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const dataRoster = {
+        "PUBG MOBILE": [
+          {
+            nama: "Abdila Zaida",
+            jurusan:
+              "Teknik Informatika dan Komputer/Teknik Multimedia Digital",
+            role: "IGL",
+          },
+          {
+            nama: "Fahmi Hidayat",
+            jurusan: "Teknik Otomasi Listrik Industri",
+            role: "RUSHER 1",
+          },
+          {
+            nama: "Muhamad Ihsan Nurhakim Imam Putra",
+            jurusan: "Teknik Elektro/Teknik Listrik",
+            role: "SCOUT",
+          },
+          {
+            nama: "Yohana Thresya Margaret Sumbayak",
+            jurusan: "Administrasi Niaga/ABT",
+            role: "RUSHER 2",
+          },
+          {
+            nama: "Muhamad Haydar Izzatul",
+            jurusan: "Konversi Energi/Teknik Mesin",
+            role: "SCOUT",
+          },
+        ],
+        VALORANT: [
+          {
+            nama: "Achmad Zahran Zakiyyansyah",
+            jurusan:
+              "Teknik Informatika dan Komputer/Teknik Multimedia dan Jaringan",
+            role: "Di infokan saat First Gathering",
+          },
+          {
+            nama: "Alfarizki Nurachman",
+            jurusan:
+              "Teknik Informatika dan Komputer/Teknik Multimedia dan Jaringan",
+            role: "Di infokan saat First Gathering",
+          },
+          {
+            nama: "Geosevi",
+            jurusan: "Teknik Elektro/Telekomunikasi",
+            role: "Di infokan saat First Gathering",
+          },
+          {
+            nama: "Irfan Apriliano",
+            jurusan:
+              "Teknik Informatika dan Komputer/Teknik Multimedia dan Jaringan",
+            role: "Di infokan saat First Gathering",
+          },
+          {
+            nama: "Nayendra Ajidiwanto Jaelani",
+            jurusan: "Teknik Informatika dan Komputer/Teknik Informatika",
+            role: "Di infokan saat First Gathering",
+          },
+          {
+            nama: "Fauzan Ashril Hakiim",
+            jurusan: "Teknik Informatika dan Komputer/Teknik Informatika",
+            role: "Di infokan saat First Gathering",
+          },
+        ],
+        "MOBILE LEGENDS": [
+          {
+            nama: "Adityo Krisna Priambodo",
+            jurusan: "Administrasi Niaga/Administrasi Bisnis Terapan",
+            role: "MIDLANE",
+            tim: "Mobile Legends A",
+          },
+          {
+            nama: "Dafi Tazkirasyi",
+            jurusan: "Administrasi Niaga/Administrasi Bisnis Terapan",
+            role: "ROAMER",
+            tim: "Mobile Legends A",
+          },
+          {
+            nama: "Naufal Firdaus",
+            jurusan: "Administrasi Niaga dan Administrasi Bisnis",
+            role: "JUNGLER",
+            tim: "Mobile Legends A",
+          },
+          {
+            nama: "Raihan Ulwan Afif",
+            jurusan: "Teknik Mesin/Teknik Mesin",
+            role: "EXPLANE",
+            tim: "Mobile Legends A",
+          },
+          {
+            nama: "Sultan Gifari",
+            jurusan: "Teknik Mesin/Teknik Mesin",
+            role: "GOLDLANE",
+            tim: "Mobile Legends A",
+          },
+          {
+            nama: "Ananda Adjie Syahputra",
+            jurusan: "Teknik Mesin/Teknik Mesin",
+            role: "MIDLANE",
+            tim: "Mobile Legends B",
+          },
+          {
+            nama: "Gusti Komang Dhiraputra Riana",
+            jurusan: "TIK/Teknik Multimedia Digital",
+            role: "ROAMER",
+            tim: "Mobile Legends B",
+          },
+          {
+            nama: "Hammam Alfarizi Yahya",
+            jurusan:
+              "Teknik Grafika dan Penerbitan/Teknologi Rekayasa Cetak dan Grafis 3 Dimensi",
+            role: "GOLDLANE",
+            tim: "Mobile Legends B",
+          },
+          {
+            nama: "Muhammad Arif Faturohman",
+            jurusan: "Teknik Sipil/Teknik Konstruksi Gedung",
+            role: "JUNGLER",
+            tim: "Mobile Legends B",
+          },
+          {
+            nama: "Raja Rizqi Noval Suryajaya",
+            jurusan: "Teknik Grafika Penerbitan",
+            role: "EXPLANE",
+            tim: "Mobile Legends B",
+          },
+        ],
+      };
+
+      const contactManager = {
+        "PUBG MOBILE": "Wildan (0813-1600-0149)",
+        VALORANT: "Vio (0878-8817-1745)",
+        "MOBILE LEGENDS": "Semm (0822-7701-4821)",
+        "MOBILE LEGENDS": "Semm (0822-7701-4821)",
+      };
+
+      function tampilkanHasil() {
+        let namaInput = localStorage.getItem("nama")?.trim().toLowerCase();
+        let divisiInput = localStorage.getItem("divisi")?.trim().toLowerCase();
+
+        if (!namaInput || !divisiInput) {
+          let resultBox = document.querySelector(".result-box");
+          resultBox.innerHTML =
+            "<h3>Data tidak ditemukan. Silakan kembali ke halaman utama.</h3>";
+          resultBox.style.backgroundColor = "red";
+          return;
+        }
+
+        let peserta = null;
+        let divisiDitemukan = null;
+
+        // Looping dengan normalisasi divisi
+        for (let divisi in dataRoster) {
+          if (divisi.toLowerCase() === divisiInput) {
+            peserta = dataRoster[divisi].find(
+              (p) => p.nama.trim().toLowerCase() === namaInput
+            );
+            if (peserta) {
+              divisiDitemukan = divisi;
+            }
+            break; // Stop pencarian jika divisi ditemukan
+          }
+        }
+
+        if (peserta) {
+          document.getElementById("nama").textContent = peserta.nama;
+          document.getElementById("jurusan").textContent = peserta.jurusan;
+          document.getElementById("divisi").textContent = divisiDitemukan;
+          document.getElementById("role").textContent = peserta.role || "";
+
+          let timElement = document.getElementById("tim-info");
+          if (divisiDitemukan.toLowerCase() === "mobile legends") {
+            document.getElementById("tim").textContent = peserta.tim || "-";
+            timElement.style.display = "block";
+          } else {
+            timElement.style.display = "none";
+          }
+
+          document.getElementById("contact-person").textContent =
+            contactManager[divisiDitemukan] ||
+            "Hubungi panitia untuk informasi lebih lanjut.";
+        } else {
+          let resultBox = document.querySelector(".result-box");
+          resultBox.innerHTML =
+            "<h3>Mohon maaf, Anda tidak lolos seleksi Roster.<br><br> Semangat Berlatih dan tunggu kesempatan berikutnya yaa! </h3>";
+          resultBox.style.backgroundColor = "red";
+        }
+      }
+
+      tampilkanHasil();
+    </script>
+  </body>
+</html>

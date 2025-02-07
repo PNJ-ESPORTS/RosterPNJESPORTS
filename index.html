@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Seleksi Roster PNJ Esports 2025</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 10px;
+      }
+
+      .container-box {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        text-align: center;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      input {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid white;
+        color: white;
+        text-align: center;
+      }
+
+      input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      input:focus {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .container-box {
+          width: 90%;
+          padding: 20px;
+        }
+        h3 {
+          font-size: 18px;
+        }
+        input {
+          font-size: 14px;
+        }
+        .btn-primary {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-box">
+      <img src="logo.png" alt="Logo PNJ Esports" width="140" class="mb-3" />
+      <h3>Hasil Seleksi Roster PNJ Esports 2025</h3>
+      <div class="mt-4">
+        <label for="nama" class="form-label">Masukkan Nama</label>
+        <input
+          type="text"
+          id="nama"
+          class="form-control text-center"
+          placeholder="Contoh: Budi"
+        />
+
+        <label for="divisi" class="form-label mt-3">Masukkan Divisi</label>
+        <input
+          type="text"
+          id="divisi"
+          class="form-control text-center"
+          placeholder="Contoh: Mobile Legends"
+        />
+
+        <button class="btn btn-primary mt-3 w-100" onclick="cekHasil()">
+          Lihat Hasil Seleksi
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function cekHasil() {
+        let nama = document.getElementById("nama").value.trim().toLowerCase();
+        let divisi = document
+          .getElementById("divisi")
+          .value.trim()
+          .toLowerCase();
+
+        if (nama === "" || divisi === "") {
+          alert("Harap masukkan nama dan divisi!");
+          return;
+        }
+
+        localStorage.setItem("nama", nama);
+        localStorage.setItem("divisi", divisi);
+        window.location.href = "hasil.html";
+      }
+    </script>
+  </body>
+</html>
